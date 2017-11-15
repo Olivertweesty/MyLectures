@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Lectures</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="FCM_PREF">com.codegreed_devs.livebettinggoal.fcm_pref</string>
+    <string name="FCM_TOKEN">com.codegreed_devs.livebettinggoal.fcm_token</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="about_app">This App was Created To remind Students Of the Lectures Time and Also show them directions to the Lectures Halls</string>
+    <string name="decription">To notify students of the Lectures time</string>
+</resources>

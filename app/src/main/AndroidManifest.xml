@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.codegreed_devs.mylectures">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".About"
+            android:label="About"
+            android:parentActivityName=".Settings">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.codegreed_devs.mylectures.Settings" />
+        </activity>
+        <activity
+            android:name=".Settings"
+            android:label="Settings"
+            android:parentActivityName=".Main2Activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.codegreed_devs.mylectures.Main2Activity" />
+        </activity>
+        <activity
+            android:name=".signin"
+            android:label="Sign In"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+
+        <service
+            android:name=".MyLectureService"
+            android:description="@string/decription"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver
+            android:name=".autostart"
+            android:enabled="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".FcmInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".FcmMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".lectures"
+            android:parentActivityName=".Main2Activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.codegreed_devs.mylectures.Main2Activity" />
+        </activity>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="7c3852c52fb66c9086771cccd536333d3aea498a" />
+
+        <activity
+            android:name=".Notices"
+            android:label="Notices"
+            android:parentActivityName=".Main2Activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.codegreed_devs.mylectures.Main2Activity" />
+        </activity>
+        <activity android:name=".Notes_Display"
+            android:label="Notes"
+            android:parentActivityName=".Main2Activity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.codegreed_devs.mylectures.Main2Activity"/>
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="app_package_name.fileProvider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

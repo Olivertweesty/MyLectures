@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+      android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        android:id="@+id/holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="2dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="4dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="2dp">
+
+        <android.widget.RelativeLayout
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            >
+
+            <TextView
+                android:id="@+id/unit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:text="Unit name"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000" />
+            <TextView
+                android:id="@+id/lecturer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:gravity="center|start"
+                android:text="Lecturer_name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000"
+                android:layout_below="@+id/unit_name"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <ImageView
+                android:id="@+id/ic_doc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_doc"
+                android:layout_below="@+id/lecturer_name"
+                android:layout_alignLeft="@+id/lecturer_name"
+                android:layout_alignStart="@+id/lecturer_name" />
+
+
+            <TextView
+                android:id="@+id/doc_name"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:text="introduction to comp.doc"
+                android:textColor="#000"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="italic"
+                android:layout_below="@+id/lecturer_name"
+                android:layout_toRightOf="@+id/ic_doc" />
+
+
+        </android.widget.RelativeLayout>
+        <TextView
+            android:id="@+id/post_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:text="27/9/2017"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="italic" />
+
+
+       <ImageView
+           android:id="@+id/download"
+           android:layout_width="30dp"
+           android:layout_height="30dp"
+           android:focusable="false"
+           app:layout_anchor="@id/holder"
+           android:src="@drawable/ic_download"
+           android:layout_gravity="bottom|end"
+           app:layout_anchorGravity="right|end|bottom"
+           android:layout_marginBottom="15dp"
+           android:layout_marginRight="10dp"
+           android:layout_marginEnd="10dp"
+           android:clickable="true"
+           android:layout_marginLeft="5dp"
+           android:layout_marginStart="10dp"/>
+
+
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

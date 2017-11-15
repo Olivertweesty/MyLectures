@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/notices_layout"
+    android:background="#d1cfd2"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.codegreed_devs.mylectures.Notices"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp">
+
+
+    <ListView
+        android:id="@+id/notices_display_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:divider="#00ffffff"
+        android:layout_marginRight="6dp"
+        android:layout_marginLeft="6dp"
+        android:dividerHeight="2dp"/>
+
+</android.support.v4.widget.SwipeRefreshLayout>
+

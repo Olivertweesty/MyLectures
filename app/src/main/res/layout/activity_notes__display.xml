@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipe_notes"
+    android:background="#d4d3d3"
+    tools:context="com.codegreed_devs.mylectures.Notes_Display">
+
+
+    <ListView
+        android:id="@+id/notes_list"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        android:divider="#00ffffff"
+        android:layout_marginRight="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_weight="1"
+        android:layout_above="@+id/adViewCardItem"
+        android:layout_alignParentTop="true" />
+
+
+</android.support.v4.widget.SwipeRefreshLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "477628011472",
+    "firebase_url": "https://mylectures-9a68d.firebaseio.com",
+    "project_id": "mylectures-9a68d",
+    "storage_bucket": "mylectures-9a68d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477628011472:android:7dbbc7a69da8a56d",
+        "android_client_info": {
+          "package_name": "com.codegreed_devs.mylectures"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477628011472-6f0n5t1u6unvs50ui61fr2tj0r6uc173.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codegreed_devs.mylectures",
+            "certificate_hash": "4b3413882266bdb204e1a5ba2ab803a4a6909c91"
+          }
+        },
+        {
+          "client_id": "477628011472-kdpam3jt949fpiqdo160vn231gdf10v8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC66VrPYkgr2rVmXVvmkSP0eDwxZYMqYv8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477628011472-kdpam3jt949fpiqdo160vn231gdf10v8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

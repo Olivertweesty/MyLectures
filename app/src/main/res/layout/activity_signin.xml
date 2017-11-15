@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    android:layout_weight="1"
+    tools:context="com.codegreed_devs.mylectures.signin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_weight="0.75"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|bottom"
+            android:paddingBottom="20dp"
+            android:textSize="55dp"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:text="Welcome Student" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/tname"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/customborder"
+            android:ems="10"
+            android:textSize="25dp"
+            android:hint="Registration Number"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/department"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textSize="25dp"
+            android:background="@drawable/customborder"
+            android:ems="10"
+            android:hint="Level of Study"
+            android:inputType="numberDecimal"
+            android:paddingLeft="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/signin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="75dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonborder"
+            android:text="Sign In"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.9"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center|bottom"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:paddingBottom="20dp"
+            android:text="Copyright 2017 codegreeddevelopers" />
+    </LinearLayout>
+
+</android.widget.LinearLayout>
