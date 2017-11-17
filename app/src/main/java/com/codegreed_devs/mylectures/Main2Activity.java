@@ -472,14 +472,14 @@ public class Main2Activity extends AppCompatActivity {
                 nxt_lec=current.getString(2)+"#"+current.getString(3)+"#"+current.getString(4)+"#"+current.getString(5)+"#"+current.getString(6);
             }
 
-            /*if (current_lec.equals("")){
-                current_lec=;
-            }else if (nxt_lec.equals("")){
-                nxt_lec="-/-/NOT AVAILABLE/-/-";
-            }else if(current_lec.equals("")&&nxt_lec.equals("")){
-                nxt_lec="-/-/NOT AVAILABLE/-/-";
-                current_lec="-/-/NOT AVAILABLE/-/-";
-            }*/
+//            /*if (current_lec.equals("")){
+//                current_lec=;
+//            }else if (nxt_lec.equals("")){
+//                nxt_lec="-/-/NOT AVAILABLE/-/-";
+//            }else if(current_lec.equals("")&&nxt_lec.equals("")){
+//                nxt_lec="-/-/NOT AVAILABLE/-/-";
+//                current_lec="-/-/NOT AVAILABLE/-/-";
+//            }*/
 
             String no_ava="-#-#NOT AVAILABLE#-#-";
             if (current_lec.equals(no_ava) && nxt_lec.equals(no_ava)){
