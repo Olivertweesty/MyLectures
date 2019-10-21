@@ -90,7 +90,7 @@ public class signin extends AppCompatActivity {
         AsyncHttpClient asyncHttpClient=new AsyncHttpClient();
         RequestParams params=new RequestParams();
         params.put("class_id",id_user);
-        asyncHttpClient.post("http://kimesh.com/mylectures/check_avail.php", params, new TextHttpResponseHandler() {
+        asyncHttpClient.post(Constatnts.server+"/check_available", params, new TextHttpResponseHandler() {
             @Override
             public void onFailure(int i, Header[] headers, String s, Throwable throwable) {
                 //Toast.makeText(signin.this, "Server Unreachable", Toast.LENGTH_SHORT).show();
