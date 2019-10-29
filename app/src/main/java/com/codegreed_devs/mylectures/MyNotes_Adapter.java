@@ -131,7 +131,7 @@ public class MyNotes_Adapter extends ArrayAdapter<MyNotes> {
                         public void run() {
 
                             OkHttpClient client = new OkHttpClient();
-                            Request request = new Request.Builder().url("http://www.kimesh.com/mylectures/uploads/"+selected_file).build();
+                            Request request = new Request.Builder().url(Constatnts.server+"/download/"+selected_file).build();
                             Response response = null;
                             try {
                                 response = client.newCall(request).execute();

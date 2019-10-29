@@ -112,7 +112,7 @@ public class Notes_Display extends AppCompatActivity {
             AsyncHttpClient asyncHttpClient=new AsyncHttpClient();
             RequestParams params=new RequestParams();
             params.put("id_user",id_user.toLowerCase().trim());
-            asyncHttpClient.post("http://kimesh.com/mylectures/notes.php", params,new TextHttpResponseHandler() {
+            asyncHttpClient.post(Constatnts.server+"/load_notes", params,new TextHttpResponseHandler() {
                 @Override
                 public void onFailure(int i, Header[] headers, String s, Throwable throwable) {
                     mprogress.dismiss();

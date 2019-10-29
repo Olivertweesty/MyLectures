@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.RequestParams;
@@ -85,7 +86,7 @@ public class Notices extends AppCompatActivity {
             AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
             RequestParams params=new RequestParams();
             params.put("id_user",id_user.toLowerCase().trim());
-            asyncHttpClient.post("http://www.kimesh.com/mylectures/check_notices.php", params,new TextHttpResponseHandler() {
+            asyncHttpClient.post(Constatnts.server+"/load_notices", params,new TextHttpResponseHandler() {
                 @Override
                 public void onFailure(int i, Header[] headers, String s, Throwable throwable) {
                     mprogress.dismiss();
@@ -108,6 +109,7 @@ public class Notices extends AppCompatActivity {
                     mprogress.dismiss();
                     try {
                         JSONArray messages = new JSONArray(s);
+                        // Toast.makeText(Notices.this, s, Toast.LENGTH_SHORT).show();
                         ArrayList<NoticesGetter> notice_list = NoticesGetter.fromJson(messages);
                         noticesGetterAdapter.addAll(notice_list);
 

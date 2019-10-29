@@ -308,7 +308,7 @@ public class Main2Activity extends AppCompatActivity {
         AsyncHttpClient asyncHttpClient=new AsyncHttpClient();
         RequestParams params=new RequestParams();
         params.put("id_user",id_use.toLowerCase());
-        asyncHttpClient.post("http://www.kimesh.com/mylectures/load_lessons.php",params,new TextHttpResponseHandler() {
+        asyncHttpClient.post(Constatnts.server+"/load_lessons",params,new TextHttpResponseHandler() {
             @Override
             public void onFailure(int i, Header[] headers, String s, Throwable throwable) {
                 //Toast.makeText(Main2Activity.this, "Server Unreachable", Toast.LENGTH_SHORT).show();
